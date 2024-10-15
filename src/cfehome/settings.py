@@ -105,6 +105,16 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = 'static/'
+STATICFILES_BASE_DIR = BASE_DIR / "staticfiles"
+STATICFILES_VENDOR_DIR = STATICFILES_BASE_DIR / "vendors"
+
+# Static files directories for collectstatic
+STATICFILES_DIRS = [
+    STATICFILES_BASE_DIR,
+]
+
+# local CDN
+STATIC_ROOT = BASE_DIR / "local-cdn"
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
