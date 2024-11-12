@@ -22,5 +22,12 @@ def login_view(request):
 
     return render(request, "auth/login.html", {})
 
-# def register_view(request):
-#     return render(request, "auth/register.html", {})
+def register_view(request):
+    if request.user.is_authenticated:
+        return redirect("/")
+    
+    if request.method == "POST":
+        username = request.POST.get("username") or None
+        password = request.POST.get("password") or None
+
+    return render(request, "auth/register.html", {})

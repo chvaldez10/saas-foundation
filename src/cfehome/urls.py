@@ -24,4 +24,5 @@ urlpatterns = [
     path("hello-world/", home_page_view),
     path('admin/', admin.site.urls),
     path('login/', auth_views.login_view, name='login'),
+    path('register/', auth_views.register_view, name='register'),
 ]
