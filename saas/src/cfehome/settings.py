@@ -116,6 +116,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_EMAIL_REQUIRED = True
+
 # Django Allauth Config
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
